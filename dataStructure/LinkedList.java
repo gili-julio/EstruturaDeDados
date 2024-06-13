@@ -22,7 +22,7 @@ public class LinkedList {
 	private Node tail;
 	private int length;
 	
-	class Node {
+	public class Node {
 		String data;
 		Node next;
 		
