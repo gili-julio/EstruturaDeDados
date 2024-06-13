@@ -67,5 +67,19 @@ public class Queue {
 		this.length++;
 	}
 	
-	
+	public Node dequeue() {
+		if(this.length == 0) {
+			return null;
+		}
+		Node temp = this.first;
+		if(length == 1) {
+			this.first = null;
+			this.last = null;
+		} else {
+			this.first = this.first.next;
+			temp.next = null;
+		}
+		this.length--;
+		return temp;
+	}
 }
