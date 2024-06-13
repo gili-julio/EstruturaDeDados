@@ -32,5 +32,16 @@ public class Stack {
 		System.out.println("Height: " + this.height);
 	}
 	
-	
+	public void print() {
+		System.out.println("##############");
+		Node temp = this.top;
+		if(temp == null) {
+			System.out.println("Pilha vazia");
+		}
+		while(temp != null) {
+			System.out.println(temp.value);
+			temp = temp.next;
+		}
+		System.out.println("##############");
+	}
 }
