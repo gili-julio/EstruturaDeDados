@@ -53,7 +53,7 @@ public class Tree {
 	}
 
 	private void preOrder(Node node) {
-		//R E D
+		//Raiz Esquerda Direita
 		if(node == null) {
 			return;
 		}
