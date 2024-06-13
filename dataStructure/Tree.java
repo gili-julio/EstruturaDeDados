@@ -90,4 +90,23 @@ public class Tree {
 		System.out.println(node.value);	
 	}
 	
+	public void BFS() {
+		//Busca em largura (por nível)
+		if(this.root == null) return;
+		Queue<Node> queue = new LinkedList<>();
+		queue.add(this.root);
+		while(!queue.isEmpty()) {
+			Node node = queue.remove();
+			if(node.left != null) queue.add(node.left);
+			if(node.right != null) queue.add(node.right);
+			
+			System.out.println(node.value);
+		}
+	}
+	
+	public void DFS() {
+		//Busca em profundidade (= preOrder)
+		preOrder();
+	}
+	
 }
