@@ -54,4 +54,18 @@ public class Queue {
 		}
 		System.out.println("##################");
 	}
+	
+	public void enqueue(int value) {
+		Node newNode = new Node(value);
+		if(this.length == 0) {
+			this.first = newNode;
+			this.last = newNode;
+		} else {
+			this.last.next = newNode;
+			this.last = newNode;
+		}
+		this.length++;
+	}
+	
+	
 }
