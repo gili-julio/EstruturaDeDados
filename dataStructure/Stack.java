@@ -44,4 +44,15 @@ public class Stack {
 		}
 		System.out.println("##############");
 	}
+
+	public void push(int value) {
+		Node newNode = new Node(value);
+		if(this.height == 0) {
+			this.top = newNode;
+		} else {
+			newNode.next = this.top;
+			this.top = newNode;
+		}
+		height++;
+	}
 }
