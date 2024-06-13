@@ -32,11 +32,26 @@ public class Queue {
 	
 	public void getLast() {
 		if(this.last != null) {
-			System.out.println("First: " + this.last.value);
+			System.out.println("Last: " + this.last.value);
 		} else {
 			System.out.println("Fila vazia");
 		}
 	}
 	
+	public void getLength() {
+		System.out.println("Length: " + this.length);
+	}
 	
+	public void print() {
+		System.out.println("##################");
+		Node temp = this.first;
+		if(temp == null) {
+			System.out.println("Fila vazia");
+		}
+		while(temp != null) {
+			System.out.println(temp.value);
+			temp = temp.next;
+		}
+		System.out.println("##################");
+	}
 }
